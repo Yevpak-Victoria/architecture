@@ -1,0 +1,15 @@
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\bin\Debug\net8.0\Library.Application.deps.json
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\bin\Debug\net8.0\Library.Application.dll
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\bin\Debug\net8.0\Library.Application.pdb
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\bin\Debug\net8.0\Library.Domain.dll
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\bin\Debug\net8.0\Library.Domain.pdb
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library.Application.csproj.AssemblyReference.cache
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library.Application.AssemblyInfoInputs.cache
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library.Application.AssemblyInfo.cs
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library.Application.csproj.CoreCompileInputs.cache
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library..D137A66B.Up2Date
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library.Application.dll
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\refint\Library.Application.dll
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library.Application.pdb
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\ref\Library.Application.dll
