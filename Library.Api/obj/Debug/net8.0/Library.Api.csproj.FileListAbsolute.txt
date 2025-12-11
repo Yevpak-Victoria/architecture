@@ -134,3 +134,4 @@ D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\refi
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.pdb
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.genruntimeconfig.cache
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\ref\Library.Api.dll
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.sourcelink.json

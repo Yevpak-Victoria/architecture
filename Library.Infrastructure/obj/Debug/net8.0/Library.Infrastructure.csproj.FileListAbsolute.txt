@@ -17,3 +17,4 @@ D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.pdb
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.genruntimeconfig.cache
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\ref\Library.Infrastructure.dll
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.sourcelink.json

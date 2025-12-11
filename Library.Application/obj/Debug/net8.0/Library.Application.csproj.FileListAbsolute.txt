@@ -13,3 +13,4 @@ D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\refint\Library.Application.dll
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library.Application.pdb
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\ref\Library.Application.dll
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Application\obj\Debug\net8.0\Library.Application.sourcelink.json

@@ -9,3 +9,4 @@ D:\stadying\3kyrs\architecture\LibrarySolution\Library.Domain\obj\Debug\net8.0\L
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Domain\obj\Debug\net8.0\refint\Library.Domain.dll
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Domain\obj\Debug\net8.0\Library.Domain.pdb
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Domain\obj\Debug\net8.0\ref\Library.Domain.dll
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Domain\obj\Debug\net8.0\Library.Domain.sourcelink.json

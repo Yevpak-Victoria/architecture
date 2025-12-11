@@ -1,6 +1,7 @@
+using Library.Application.Interfaces;
+using Library.Application.Services;
 using Library.Infrastructure.Data;
 using Library.Infrastructure.Repositories;
-using Library.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,19 +10,26 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<LibraryDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
 // --- 2. Repository DI ---
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
 
-// --- 3. Controllers & Swagger ---
+// --- 3. Service DI ---
+builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IReservationService, ReservationService>();
+
+
+// --- 4. Controllers & Swagger ---
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// --- 4. Middleware ---
+// --- 5. Middleware ---
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -29,5 +37,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<LibraryDbContext>();
+    SeedData.Initialize(db);
+}
 
 app.Run();
