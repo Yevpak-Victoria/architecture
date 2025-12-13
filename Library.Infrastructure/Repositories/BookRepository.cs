@@ -1,9 +1,11 @@
-﻿using Library.Application.Interfaces;
+﻿using Library.Domain.Interfaces;
 using Library.Domain.Entities;
 using Library.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq.Expressions;
+using System.Linq;
 
 namespace Library.Infrastructure.Repositories
 {
@@ -21,7 +23,7 @@ namespace Library.Infrastructure.Repositories
             return await _context.Books.ToListAsync();
         }
 
-        public async Task<Book> GetByIdAsync(int id)
+        public async Task<Book?> GetByIdAsync(int id)
         {
             return await _context.Books.FindAsync(id);
         }
@@ -46,6 +48,16 @@ namespace Library.Infrastructure.Repositories
                 _context.Books.Remove(book);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<Book>> GetAvailableBooksAsync()
+        {
+            return await _context.Books.Where(b => !b.IsReserved).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Book>> FindAsync(Expression<Func<Book, bool>> predicate)
+        {
+            return await _context.Books.Where(predicate).ToListAsync();
         }
     }
 }

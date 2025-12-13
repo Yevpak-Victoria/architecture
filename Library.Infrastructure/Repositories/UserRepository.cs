@@ -1,9 +1,11 @@
-﻿using Library.Application.Interfaces;
+﻿using Library.Domain.Interfaces;
 using Library.Domain.Entities;
 using Library.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq.Expressions;
+using System.Linq;
 
 namespace Library.Infrastructure.Repositories
 {
@@ -21,7 +23,7 @@ namespace Library.Infrastructure.Repositories
             return await _context.Users.ToListAsync();
         }
 
-        public async Task<User> GetByIdAsync(int id)
+        public async Task<User?> GetByIdAsync(int id)
         {
             return await _context.Users.FindAsync(id);
         }
@@ -46,6 +48,11 @@ namespace Library.Infrastructure.Repositories
                 _context.Users.Remove(user);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<IEnumerable<User>> FindAsync(Expression<Func<User, bool>> predicate)
+        {
+            return await _context.Users.Where(predicate).ToListAsync();
         }
     }
 }

@@ -5,9 +5,9 @@ namespace Library.Application.Services
 {
     public class UserService : IUserService
     {
-        private readonly IUserRepository _userRepo;
+        private readonly Library.Domain.Interfaces.IUserRepository _userRepo;
 
-        public UserService(IUserRepository userRepo)
+        public UserService(Library.Domain.Interfaces.IUserRepository userRepo)
         {
             _userRepo = userRepo;
         }

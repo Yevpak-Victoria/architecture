@@ -528,7 +528,8 @@
             "nullable": true
           },
           "isReserved": {
-            "type": "boolean"
+            "type": "boolean",
+            "readOnly": true
           },
           "reservations": {
             "type": "array",

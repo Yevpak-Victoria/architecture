@@ -11,10 +11,10 @@ D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.AssemblyInfoInputs.cache
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.AssemblyInfo.cs
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.csproj.CoreCompileInputs.cache
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.sourcelink.json
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library..FAF1E3BF.Up2Date
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.dll
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\refint\Library.Infrastructure.dll
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.pdb
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.genruntimeconfig.cache
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\ref\Library.Infrastructure.dll
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Infrastructure\obj\Debug\net8.0\Library.Infrastructure.sourcelink.json

@@ -1,3 +1,12 @@
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.csproj.AssemblyReference.cache
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.AssemblyInfoInputs.cache
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.AssemblyInfo.cs
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.csproj.CoreCompileInputs.cache
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.sourcelink.json
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\bin\Debug\net8.0\appsettings.Development.json
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\bin\Debug\net8.0\appsettings.json
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\bin\Debug\net8.0\Library.Api.staticwebassets.endpoints.json
@@ -111,14 +120,6 @@ D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\bin\Debug\net8.0\Libr
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\bin\Debug\net8.0\Library.Infrastructure.pdb
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\bin\Debug\net8.0\Library.Application.pdb
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\bin\Debug\net8.0\Library.Domain.pdb
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.csproj.AssemblyReference.cache
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\rpswa.dswa.cache.json
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.GeneratedMSBuildEditorConfig.editorconfig
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.AssemblyInfoInputs.cache
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.AssemblyInfo.cs
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.csproj.CoreCompileInputs.cache
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.MvcApplicationPartsAssemblyInfo.cs
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -134,4 +135,3 @@ D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\refi
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.pdb
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.genruntimeconfig.cache
 D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\ref\Library.Api.dll
-D:\stadying\3kyrs\architecture\LibrarySolution\Library.Api\obj\Debug\net8.0\Library.Api.sourcelink.json

@@ -1,10 +1,11 @@
-﻿using Library.Application.Interfaces;
+﻿using Library.Domain.Interfaces;
 using Library.Domain.Entities;
 using Library.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq.Expressions;
+using System.Linq;
 
 namespace Library.Infrastructure.Repositories
 {
@@ -25,7 +26,7 @@ namespace Library.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Reservation> GetByIdAsync(int id)
+        public async Task<Reservation?> GetByIdAsync(int id)
         {
             return await _context.Reservations
                 .Include(r => r.Book)
@@ -53,6 +54,20 @@ namespace Library.Infrastructure.Repositories
                 _context.Reservations.Remove(reservation);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<Reservation>> GetByUserAsync(int userId)
+        {
+            return await _context.Reservations
+                .Include(r => r.Book)
+                .Include(r => r.User)
+                .Where(r => r.UserId == userId)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Reservation>> FindAsync(Expression<Func<Reservation, bool>> predicate)
+        {
+            return await _context.Reservations.Where(predicate).ToListAsync();
         }
     }
 }

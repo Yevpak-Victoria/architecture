@@ -5,14 +5,14 @@ namespace Library.Application.Services
 {
     public class ReservationService : IReservationService
     {
-        private readonly IReservationRepository _reservationRepo;
-        private readonly IBookRepository _bookRepo;
-        private readonly IUserRepository _userRepo;
+        private readonly Library.Domain.Interfaces.IReservationRepository _reservationRepo;
+        private readonly Library.Domain.Interfaces.IBookRepository _bookRepo;
+        private readonly Library.Domain.Interfaces.IUserRepository _userRepo;
 
         public ReservationService(
-            IReservationRepository reservationRepo,
-            IBookRepository bookRepo,
-            IUserRepository userRepo)
+            Library.Domain.Interfaces.IReservationRepository reservationRepo,
+            Library.Domain.Interfaces.IBookRepository bookRepo,
+            Library.Domain.Interfaces.IUserRepository userRepo)
         {
             _reservationRepo = reservationRepo;
             _bookRepo = bookRepo;
@@ -33,6 +33,12 @@ namespace Library.Application.Services
             if (book == null) throw new Exception("Book not found");
             if (user == null) throw new Exception("User not found");
 
+            if (book.IsReserved) throw new Exception("Book is already reserved");
+
+            // mark book as reserved using domain behavior
+            book.Reserve();
+            await _bookRepo.UpdateAsync(book);
+
             var reservation = new Reservation
             {
                 BookId = bookId,
@@ -49,6 +55,14 @@ namespace Library.Application.Services
         {
             var reservation = await _reservationRepo.GetByIdAsync(id);
             if (reservation == null) return false;
+
+            // Try to release the book when deleting reservation
+            var book = await _bookRepo.GetByIdAsync(reservation.BookId);
+            if (book != null)
+            {
+                book.Release();
+                await _bookRepo.UpdateAsync(book);
+            }
 
             await _reservationRepo.DeleteAsync(id);
             return true;

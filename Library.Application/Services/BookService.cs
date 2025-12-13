@@ -5,9 +5,9 @@ namespace Library.Application.Services
 {
     public class BookService : IBookService
     {
-        private readonly IBookRepository _bookRepo;
+        private readonly Library.Domain.Interfaces.IBookRepository _bookRepo;
 
-        public BookService(IBookRepository bookRepo)
+        public BookService(Library.Domain.Interfaces.IBookRepository bookRepo)
         {
             _bookRepo = bookRepo;
         }
@@ -23,8 +23,7 @@ namespace Library.Application.Services
             var book = new Book
             {
                 Title = title,
-                Author = author,
-                IsReserved = false
+                Author = author
             };
 
             await _bookRepo.AddAsync(book);
