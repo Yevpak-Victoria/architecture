@@ -1,5 +1,7 @@
 ﻿using Library.Application.Interfaces;
 using Library.Domain.Entities;
+using Library.Domain.Events;
+using Library.Domain.Interfaces;
 
 namespace Library.Application.Services
 {
@@ -8,15 +10,18 @@ namespace Library.Application.Services
         private readonly Library.Domain.Interfaces.IReservationRepository _reservationRepo;
         private readonly Library.Domain.Interfaces.IBookRepository _bookRepo;
         private readonly Library.Domain.Interfaces.IUserRepository _userRepo;
+        private readonly IEventPublisher _publisher;
 
         public ReservationService(
             Library.Domain.Interfaces.IReservationRepository reservationRepo,
             Library.Domain.Interfaces.IBookRepository bookRepo,
-            Library.Domain.Interfaces.IUserRepository userRepo)
+            Library.Domain.Interfaces.IUserRepository userRepo,
+            IEventPublisher publisher)
         {
             _reservationRepo = reservationRepo;
             _bookRepo = bookRepo;
             _userRepo = userRepo;
+            _publisher = publisher;
         }
 
         public async Task<IEnumerable<Reservation>> GetAllAsync()
@@ -48,6 +53,11 @@ namespace Library.Application.Services
             };
 
             await _reservationRepo.AddAsync(reservation);
+
+            // publish event
+            var ev = new ReservationCreatedEvent(reservation.Id, bookId, userId);
+            await _publisher.PublishAsync(ev);
+
             return reservation;
         }
 

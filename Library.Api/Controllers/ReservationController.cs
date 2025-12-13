@@ -1,4 +1,5 @@
-﻿using Library.Domain.Interfaces;
+﻿using Library.Application.DTOs;
+using Library.Application.Interfaces;
 using Library.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -10,47 +11,62 @@ namespace Library.Api.Controllers
     [Route("api/[controller]")]
     public class ReservationController : ControllerBase
     {
-        private readonly IReservationRepository _reservationRepository;
+        private readonly IReservationService _reservationService;
 
-        public ReservationController(IReservationRepository reservationRepository)
+        public ReservationController(IReservationService reservationService)
         {
-            _reservationRepository = reservationRepository;
+            _reservationService = reservationService;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Reservation>> GetAll()
+        public async Task<IEnumerable<ReservationDto>> GetAll()
         {
-            return await _reservationRepository.GetAllAsync();
+            var reservations = await _reservationService.GetAllAsync();
+            return reservations.Select(r => new ReservationDto
+            {
+                Id = r.Id,
+                BookId = r.BookId,
+                UserId = r.UserId,
+                Until = r.Until
+            });
         }
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Reservation>> GetById(int id)
         {
-            var reservation = await _reservationRepository.GetByIdAsync(id);
+            var reservation = await _reservationService.GetByIdAsync(id);
             if (reservation == null) return NotFound();
             return Ok(reservation);
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Create(Reservation reservation)
+        /*[HttpPost]
+        public async Task<ActionResult> Create([FromBody] CreateReservationDto dto)
         {
-            await _reservationRepository.AddAsync(reservation);
+            var reservation = await _reservationService.CreateAsync(
+                dto.BookId,
+                dto.UserId,
+                dto.Until
+            );
+
             return CreatedAtAction(nameof(GetById), new { id = reservation.Id }, reservation);
+        }*/
+
+
+        [HttpPost]
+        public async Task<ActionResult> Create([FromBody] CreateReservationDto dto)
+        {
+            // Виклик сервісу, який створює бронювання та публікує подію
+            var reservation = await _reservationService.CreateAsync(dto.BookId, dto.UserId, dto.Until);
+
+            // --- Рішення №1: повертаємо простий обʼєкт без циклічних навігацій ---
+            return Ok(new
+            {
+                Message = "Reservation created successfully",
+                ReservationId = reservation.Id
+            });
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Update(int id, Reservation reservation)
-        {
-            if (id != reservation.Id) return BadRequest();
-            await _reservationRepository.UpdateAsync(reservation);
-            return NoContent();
-        }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
-        {
-            await _reservationRepository.DeleteAsync(id);
-            return NoContent();
-        }
     }
 }

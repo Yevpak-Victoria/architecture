@@ -4,6 +4,6 @@
     {
         public int BookId { get; set; }
         public int UserId { get; set; }
-        public DateTime? Until { get; set; }
+        public DateTime Until { get; set; }
     }
 }
